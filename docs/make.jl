@@ -10,4 +10,6 @@ makedocs(
     ],
 )
 
-deploydocs(repo = "github.com/volkerkarle/Berry.jl.git")
+deploydocs(
+           repo = "github.com/volkerkarle/Berry.jl.git",
+          )

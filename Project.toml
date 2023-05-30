@@ -1,7 +1,7 @@
 name = "Berry"
 uuid = "10b661b4-fd29-4edc-9100-0be20d493c36"
 authors = ["volkerkarle <volker.karle@posteo.de>"]
-version = "0.0.1-DEV"
+version = "0.1"
 
 [deps]
 ArrayInterfaceBandedMatrices = "2e50d22c-5be1-4042-81b1-c572ed69783d"
