@@ -31,4 +31,3 @@ With Berry.jl, researchers can:
 - Explore traditional topological analysis, including the calculation of Berry curvature and topological invariants, in a user-friendly and efficient manner.
 
 Discover the vast possibilities offered by Berry.jl and embark on a journey to uncover the intricate topological aspects of quantum systems, advancing our understanding of fundamental physics and paving the way for future discoveries.
-
