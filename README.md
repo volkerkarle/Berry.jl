@@ -1,6 +1,7 @@
 # Berry.jl
 
 [![Build Status](https://github.com/volkerkarle/Berry.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/volkerkarle/Berry.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://volkerkarle.github.io/Berry.jl/dev/)
 
 Berry.jl is a new Julia package aimed at providing essential tools for the calculation of Berry curvature, topological invariants, and potentially expanding to non-equilibrium topological invariants and non-abelian invariants related to nodal lines. This package serves as a small step towards advancing the understanding of topological phenomena in quantum systems.
 
