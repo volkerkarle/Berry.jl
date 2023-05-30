@@ -1,7 +1,7 @@
 using Berry, Documenter 
 
 makedocs(
-    format = Documenter.HTML(prettyurls = false, assets = ["assets/favicon.ico"]),
+    format = Documenter.HTML(prettyurls = false,
     modules = [Berry],
     authors = "Volker Karle",
     sitename = "Berry.jl",
@@ -9,4 +9,4 @@ makedocs(
         "Home" => "index.md",
     ],
 )
-deploydocs(repo = "github.com/volkerkarle/Berry.jl.git", push_preview = true)
+deploydocs(repo = "github.com/volkerkarle/Berry.jl.git")
