@@ -1,29 +1,19 @@
-name: Documenter
-on:
+name: Documentationon:
   push:
-    branches: [master]
-    tags: [v*]
-  pull_request:
-
-jobs:
-  docs:
-    name: Documentation
+    branches:
+      - main
+    tags: '*'
+  pull_request:jobs:
+  build:
     runs-on: ubuntu-latest
-    if: "contains( github.event.pull_request.labels.*.name, 'preview docs') || github.ref == 'refs/heads/master' || contains(github.ref, 'refs/tags/')"
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@latest
         with:
-          version: 1.7
-      - uses: julia-actions/julia-docdeploy@v1
+          version: '1.9'
+      - name: Install dependencies
+        run: julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
+      - name: Build and deploy
         env:
-          PYTHON: ""
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
-  note:
-    name: "Documentation deployment note."
-    runs-on: ubuntu-latest
-    if: "!contains( github.event.pull_request.labels.*.name, 'preview docs')"
-    steps:
-      - name: echo instructions
-        run: echo 'The Documentation is only generated and pushed on a PR if the “preview docs” label is added.'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # For authentication with GitHub Actions token
+        run: julia --project=docs/ docs/make.jl

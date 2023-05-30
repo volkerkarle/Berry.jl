@@ -1,4 +1,5 @@
-using Documenter, Example
+using Berry
+using Documenter 
 
 makedocs(
     format = Documenter.HTML(prettyurls = false, assets = ["assets/favicon.ico"]),
