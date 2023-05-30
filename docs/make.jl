@@ -1,5 +1,5 @@
-using Berry, Documenter 
-
+using Documenter 
+using Berry
 makedocs(
     format = Documenter.HTML(prettyurls = false),
     modules = [Berry],
